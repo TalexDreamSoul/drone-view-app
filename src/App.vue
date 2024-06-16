@@ -3,6 +3,7 @@ import HeadBar from "./views/HeadBar.vue";
 import NavBar from "./components/navbar/NavBar.vue";
 import DisasterView from "./views/disaster/DisasterView.vue";
 import { ref } from "vue";
+import DataView from "./views/data/DataView.vue";
 
 const navOption = ref<{
   now: {
@@ -19,11 +20,18 @@ const navOption = ref<{
   <div class="AppContainer">
     <NavBar :option="navOption" />
 
-    <DisasterView :name="navOption.now?.name!">
+    <DisasterView :name="navOption.now?.name!" v-if="navOption.now?.name !== '数据监测平台'">
       <template #header>
         <HeadBar :name="navOption.now?.name!" />
       </template>
     </DisasterView>
+    
+    <DataView :name="navOption.now?.name!" v-else>
+      <template #header>
+        <HeadBar :name="navOption.now?.name!" />
+      </template>
+    </DataView>
+
   </div>
 </template>
 

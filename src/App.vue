@@ -4,12 +4,14 @@ import NavBar from "./components/navbar/NavBar.vue";
 import DisasterView from "./views/disaster/DisasterView.vue";
 import { ref } from "vue";
 import DataView from "./views/data/DataView.vue";
+import VideoView from './views/video/VideoView.vue';
 
 const navOption = ref<{
   now: {
     name: string;
     comp: any;
     svg: string;
+    [prop: string]: string
   } | null;
 }>({
   now: null,
@@ -20,18 +22,26 @@ const navOption = ref<{
   <div class="AppContainer">
     <NavBar :option="navOption" />
 
-    <DisasterView :name="navOption.now?.name!" v-if="navOption.now?.name !== '数据监测平台'">
+    <DisasterView
+      :name="navOption.now?.name!"
+      v-if="navOption.now?.normalize"
+    >
       <template #header>
         <HeadBar :name="navOption.now?.name!" />
       </template>
     </DisasterView>
-    
-    <DataView :name="navOption.now?.name!" v-else>
+
+    <DataView :name="navOption.now?.name!" v-else-if="navOption.now?.name === '数据监测平台'">
       <template #header>
         <HeadBar :name="navOption.now?.name!" />
       </template>
     </DataView>
 
+    <VideoView :name="navOption.now?.name!" v-else>
+      <template #header>
+        <HeadBar :name="navOption.now?.name!" />
+      </template>
+    </VideoView>
   </div>
 </template>
 

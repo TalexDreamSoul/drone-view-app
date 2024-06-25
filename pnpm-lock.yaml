@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  alova:
+    specifier: ^2.17.1
+    version: 2.17.1
+  path-browserify:
+    specifier: ^1.0.1
+    version: 1.0.1
   three:
     specifier: ^0.161.0
     version: 0.161.0
@@ -620,6 +626,11 @@ packages:
       json-schema-traverse: 0.4.1
       uri-js: 4.4.1
     dev: true
+
+  /alova@2.17.1:
+    resolution: {integrity: sha512-AJhbvKdABci95D3gQ/ct+JE58PHdTToSVLtcvyZo0QIcLabNwPi1UzKEQ8H2yK3uBuEB1X/J0tZqpPZnJ2QCsg==}
+    engines: {node: '>= 0.12.0'}
+    dev: false
 
   /ansi-regex@5.0.1:
     resolution: {integrity: sha512-quJQXlTSUGL2LH9SUXo8VwsY4soanhgo6LNSm84E1LBcE8s3O0wpdiRzyR9z/ZZJMlMWv37qOOb9pdJlMUEKFQ==}
@@ -1799,7 +1810,6 @@ packages:
 
   /path-browserify@1.0.1:
     resolution: {integrity: sha512-b7uo2UCUOYZcnF/3ID0lulOJi/bafxa1xPe7ZPsammBSpjSWQkjNxlt635YGS2MiR9GjvuXCtz2emr3jbsz98g==}
-    dev: true
 
   /path-is-absolute@1.0.1:
     resolution: {integrity: sha512-AVbw3UJ2e9bq64vSaS9Am0fje1Pa8pbGqTTsmXfaIiMpnr5DlDhfJOuLj9Sf95ZPVDAUerDfEk88MPmPe7UCQg==}

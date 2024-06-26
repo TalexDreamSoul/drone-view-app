@@ -5,6 +5,7 @@ import DisasterView from "./views/disaster/DisasterView.vue";
 import { ref } from "vue";
 import DataView from "./views/data/DataView.vue";
 import VideoView from './views/video/VideoView.vue';
+import SellView from "./views/sell/SellView.vue";
 
 const navOption = ref<{
   now: {
@@ -37,11 +38,17 @@ const navOption = ref<{
       </template>
     </DataView>
 
-    <VideoView :name="navOption.now?.name!" v-else>
+    <VideoView :name="navOption.now?.name!" v-else-if="navOption.now?.name === '视频详情浏览'">
       <template #header>
         <HeadBar :name="navOption.now?.name!" />
       </template>
     </VideoView>
+    
+    <SellView :name="navOption.now?.name!" v-else>
+      <template #header>
+        <HeadBar :name="navOption.now?.name!" />
+      </template>
+    </SellView>
   </div>
 </template>
 

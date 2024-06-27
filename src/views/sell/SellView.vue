@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onBeforeMount, onBeforeUnmount } from 'vue';
+import { onBeforeUnmount } from 'vue';
 import drone1 from '../../assets/drone1.jpg';
 import drone2 from '../../assets/drone2.jpg';
 import drone3 from '../../assets/drone3.jpg';
@@ -77,7 +77,7 @@ onBeforeUnmount(() => {
                     </div>
                 </div>
                 <div class="sell">
-                    <h3 style="text-align: left;color: black;">无人机及平台服务租贷</h3>
+                    <h2 style="text-align: left;color: black;">无人机及平台服务租贷</h2>
                     <p style="text-align: left;color: black;">无人机型号</p>
                     <div class="dronebutlist">
                         <button class="dronebut" @click="droneclick">气象无人机</button>
@@ -141,7 +141,7 @@ onBeforeUnmount(() => {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
 
-    background-color: rgba(255, 255, 255, 0.8);
+    /* background-color: rgba(255, 255, 255, 0.8); */
 }
 .picture {
     display: flex;
@@ -187,6 +187,8 @@ onBeforeUnmount(() => {
     height: 100%;
 
     text-align: left;
+
+    background-color: rgba(255, 255, 255, 0.9);
 }
 .dronebutlist button {
     display: inline-block;
@@ -227,10 +229,12 @@ onBeforeUnmount(() => {
     margin-right: auto;
     margin-top: 2%;
     width: 80%;
-    height: 30%;
+    height: 40%;
 
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 12px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
 
     background-color: rgba(255, 255, 255, 0.05);
 }
@@ -239,7 +243,7 @@ onBeforeUnmount(() => {
 }
 .review li {
     width: 100%;
-    height: 100%;
+    height: 70%;
 
     border: 1px solid rgba(255, 255, 255, 0.2);
 }

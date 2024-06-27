@@ -30,6 +30,6 @@ export default [
   {
     name: "平台销售服务",
     comp: SellView,
-    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><svg/>'
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><g stroke="currentColor" stroke-width="20"><circle cx="125" cy="80" r="50"/><polygon points="60,90 190,90 210,230 40,230" fill="currentColor"/></g><svg/>',
   }
 ];

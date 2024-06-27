@@ -1,7 +1,8 @@
 import DisasterViewVue from "../../views/disaster/DisasterView.vue";
 import ConstructionViewVue from "../../views/ConstructionView.vue";
 import DataView from "../../views/data/DataView.vue";
-import VideoView from '../../views/video/VideoView.vue'
+import VideoView from '../../views/video/VideoView.vue';
+import SellView from '../../views/sell/SellView.vue'
 
 export default [
   {
@@ -25,5 +26,10 @@ export default [
     name: "视频详情浏览",
     comp: VideoView,
     svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 20 20"><path fill="currentColor" d="M2 6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm12.553 1.106A1 1 0 0 0 14 8v4a1 1 0 0 0 .553.894l2 1A1 1 0 0 0 18 13V7a1 1 0 0 0-1.447-.894z"/></svg>',
+  },
+  {
+    name: "平台销售服务",
+    comp: SellView,
+    svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 256 256"><g stroke="currentColor" stroke-width="20"><circle cx="125" cy="80" r="50"/><polygon points="60,90 190,90 210,230 40,230" fill="currentColor"/></g><svg/>',
   }
 ];
